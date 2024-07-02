@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>  // Для использования cos и M_PI
+
+double calculateFunction(double x, double y) 
+{
+    double result = (cos(x) / (M_PI - 2 * x)) + (16 * x * cos(x * y));
+    return result;
+}
+
+int main() {
+    double x, y;
+    std::cout << "Введите x: ";
+    std::cin >> x;
+    std::cout << "Введите y: ";
+    std::cin >> y;
+
+    double result = calculateFunction(x, y);
+    std::cout << "Результат: " << result << std::endl;
+
+    return 0;
+}
